@@ -17,7 +17,7 @@ func Vulnerabilities() *schema.Table {
 	return &schema.Table{
 		Name:      "crowdstrike_falcon_vulnerabilities",
 		Resolver:  fetchVulnerabilities,
-		Transform: transformers.TransformWithStruct(&models.DomainBaseAPIVulnerabilityV2{}, transformers.WithPrimaryKeys("ID")),
+		Transform: transformers.TransformWithStruct(&models.DomainBaseAPIVulnerabilityV2{}),
 	}
 }
 
