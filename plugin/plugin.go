@@ -14,15 +14,10 @@ var (
 
 func Plugin() *source.Plugin {
 	return source.NewPlugin(
-		"justmiles-crowdstrike",
+		"rushvanth-crowdstrike",
 		Version,
 		schema.Tables{
-			resources.Incidents(),
-			resources.Detections(),
-			resources.Hosts(),
 			resources.Vulnerabilities(),
-			resources.DiscoverApps(),
-			resources.DiscoverHosts(),
 		},
 		client.New,
 	)
